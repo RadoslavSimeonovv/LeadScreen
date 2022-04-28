@@ -19,7 +19,7 @@
             modelBuilder.ApplyConfiguration(new SubareaConfig());
             modelBuilder.ApplyConfiguration(new LeadConfig());
 
-            // AppGreat.Data.Seeder.AppGreatSeeder.SeedDatabase(modelBuilder);
+            LeadScreen.Data.Seeder.LeadScreenSeeder.SeedDatabase(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }

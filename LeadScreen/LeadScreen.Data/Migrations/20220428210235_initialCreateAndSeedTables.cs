@@ -2,7 +2,7 @@
 
 namespace LeadScreen.Data.Migrations
 {
-    public partial class test : Migration
+    public partial class initialCreateAndSeedTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,6 +26,8 @@ namespace LeadScreen.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    Pincode = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     MobileNumber = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
@@ -40,6 +42,18 @@ namespace LeadScreen.Data.Migrations
                         principalTable: "Subarea",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Subarea",
+                columns: new[] { "Id", "Name", "Pincode" },
+                values: new object[,]
+                {
+                    { 1, "Mladost 1", "1784" },
+                    { 2, "Lyulin", "1336" },
+                    { 3, "Musagenitsa", "1797" },
+                    { 4, "Nadejda", "1220" },
+                    { 5, "Obelya", "1387" }
                 });
 
             migrationBuilder.CreateIndex(
