@@ -15,9 +15,9 @@ namespace LeadScreen.Services.Mappers
             subareaDTO.Id = subarea.Id;
             subareaDTO.Name = subarea.Name;
             subareaDTO.Pincode = subarea.Pincode;
-            subareaDTO.Leads = subarea.Leads
-                .Select(x => LeadMapper.MapLeadToDTO(x))
-                .ToList();
+            //subareaDTO.Leads = subarea.Leads
+            //    .Select(x => LeadMapper.MapLeadToDTO(x))
+            //    .ToList();
                 
             return subareaDTO;
         }

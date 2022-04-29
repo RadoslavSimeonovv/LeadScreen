@@ -32,6 +32,7 @@ namespace LeadScreen
 
             services.AddScoped<ISubareaService, SubareaService>();
             services.AddScoped<ILeadService, LeadService>();
+            services.AddScoped<IWriteIntoJsonService, WriteIntoJsonService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

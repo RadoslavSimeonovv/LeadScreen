@@ -4,6 +4,9 @@
     using LeadScreen.Data.Entities;
     using Microsoft.EntityFrameworkCore;
 
+    /// <summary>
+    /// Context and entity configurations
+    /// </summary>
     public class LeadScreenContext : DbContext
     {
         public LeadScreenContext(DbContextOptions<LeadScreenContext> options)

@@ -10,6 +10,9 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Subarea service
+    /// </summary>
     public class SubareaService : ISubareaService
     {
         private readonly LeadScreenContext _leadScreenContext;
@@ -31,10 +34,11 @@
             {
                 throw new ArgumentNullException("No subareas found!");
             }
-
-            var subareasDTO = subareas
-                .Select(x => SubareaMapper.MapSubareaToDTO(x))
-                .ToList();
+            
+            var subareasDTO = new List<SubareaDTO>();  
+                subareasDTO = subareas
+                    .Select(x => SubareaMapper.MapSubareaToDTO(x))
+                    .ToList();
 
             return subareasDTO;
         }

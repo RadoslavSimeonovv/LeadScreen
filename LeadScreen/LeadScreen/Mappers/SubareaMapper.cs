@@ -3,6 +3,9 @@ using LeadScreen.Web.Models;
 
 namespace LeadScreen.Web.Mappers
 {
+    /// <summary>
+    /// Subarea view model and dto mapper
+    /// </summary>
     internal static class SubareaMapper
     {
         internal static SubareaViewModel MapSubareaToVM(this SubareaDTO subareaDTO)
@@ -13,16 +16,6 @@ namespace LeadScreen.Web.Mappers
             subareaVM.Pincode = subareaDTO.Pincode;
 
             return subareaVM;
-        }
-
-        internal static SubareaDTO MapSubareaVMToDTO(this SubareaViewModel subareaVM)
-        {
-            var subareaDTO = new SubareaDTO();
-            subareaDTO.Id = subareaVM.Id;
-            subareaDTO.Name = subareaVM.Name;
-            subareaDTO.Pincode = subareaVM.Pincode;
-
-            return subareaDTO;
         }
     }
 }

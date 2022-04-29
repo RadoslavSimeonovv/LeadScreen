@@ -8,7 +8,6 @@
         public string Address { get; set; }
         public string MobileNumber { get; set; }
         public string Email { get; set; }
-        public SubareaViewModel Subarea { get; set; }
         public int SubAreaId { get; set; }
     }
 }

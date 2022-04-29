@@ -16,6 +16,13 @@
             this._subareaService = subareaService;
         }
 
+        /// <summary>
+        /// Fetch subareas by pincode
+        /// http://localhost:5000/api/subarea/pincode
+        /// </summary>
+        /// <param name="pincode"></param>
+        /// <returns>List of subareas</returns>
+
         [HttpGet]
         [Route("{pincode}")]
         public async Task<IActionResult> GetSubareasByPincode(string pincode)

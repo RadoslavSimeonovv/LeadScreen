@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LeadScreen.Data.Seeder
 {
+    /// <summary>
+    /// Static seeder for subarea entity
+    /// </summary>
     public static class LeadScreenSeeder
     {
         public static void SeedDatabase(ModelBuilder modelBuilder)

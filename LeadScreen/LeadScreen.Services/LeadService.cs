@@ -7,6 +7,9 @@
     using System;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Lead service
+    /// </summary>
     public class LeadService : ILeadService
     {
         private readonly LeadScreenContext _leadScreenContext;
